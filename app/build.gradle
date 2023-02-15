@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.crouge'
+    namespace 'com.example.crogue'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.crouge"
+        applicationId "com.example.crogue"
         minSdk 24
         targetSdk 33
         versionCode 1

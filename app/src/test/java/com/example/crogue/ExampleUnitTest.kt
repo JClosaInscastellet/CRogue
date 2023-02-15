@@ -1,4 +1,4 @@
-package com.example.crouge
+package com.example.crogue
 
 import org.junit.Test
 
