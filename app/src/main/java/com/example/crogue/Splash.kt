@@ -33,7 +33,7 @@ class Splash : AppCompatActivity() {
     }
     fun changeActivity(){
         //Change activiry
-        val intent = Intent(this, MainMenu::class.java)
+        val intent = Intent(this, Login::class.java)
         startActivity(intent)
     }
 }
