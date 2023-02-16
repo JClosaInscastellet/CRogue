@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CRogue</string>
+    <string name="Login">Iniciar Sessio</string>
+    <string name="Register">Registrarse</string>
+    <string name="EMail">Correu Electronic</string>
+    <string name="Name">Nom</string>
+    <string name="Password">Contrasenys</string>
+    <string name="Date">Data</string>
+</resources>

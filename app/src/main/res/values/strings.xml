@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CRogue</string>
+    <string name="Login">Login</string>
+    <string name="Register">Register</string>
+    <string name="EMail">E-mail</string>
+    <string name="Name">Name</string>
+    <string name="Password">Password</string>
+    <string name="Date">Date</string>
 </resources>
