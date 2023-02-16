@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class StartScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_startscreen)
         val loginbtn = findViewById<Button>(R.id.BTMLOGIN)
         val registerbtn = findViewById<Button>(R.id.BTMREGISTRO)
 
