@@ -7,6 +7,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import java.util.Timer
 import kotlin.concurrent.schedule
+import android.media.MediaPlayer
 
 class Splash : AppCompatActivity() {
 
@@ -21,12 +22,16 @@ class Splash : AppCompatActivity() {
 
         //Get ImageView
         val splashIMView = findViewById<ImageView>(R.id.splashIM)
+        //var para imortar sonido spalsh
+        val mediaPlayer = MediaPlayer.create(this, R.raw.opening);
+        mediaPlayer.setVolume(100f , 100f);
 
         //Put Splash into it
-        Glide.with(this).load(R.drawable.splash).into(splashIMView)
+        Glide.with(this).load(R.drawable.crouge_logo).into(splashIMView)
 
         //Make it last 3 sec
         Timer().schedule(SPLASH_DURATION){
+            mediaPlayer.start()
             changeActivity()
         }
 
