@@ -1,5 +1,6 @@
 package com.example.crogue
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -9,6 +10,8 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import java.text.DateFormat.getDateInstance
 import java.text.SimpleDateFormat
 import java.util.*
@@ -86,12 +89,36 @@ class Register : AppCompatActivity() {
             var passString: String = passEt.getText().toString()
             var nombreString: String = nombreEt.getText().toString()
             var fechaString: String= fechaTxt.getText().toString()
+            var dadesJugador : HashMap<String,String> = HashMap<String, String>()
+            dadesJugador.put ("Uid",uidString)
+            dadesJugador.put ("Email",correoString)
+            dadesJugador.put ("Password",passString)
+            dadesJugador.put ("Nom",nombreString)
+            dadesJugador.put ("Data",fechaString)
+            dadesJugador.put ("Puntuacio",puntuacio.toString())
+            var database: FirebaseDatabase =
+                FirebaseDatabase.getInstance("https://crogue-357e6-default-rtdb.europe-west1.firebasedatabase.app/")
+            var reference: DatabaseReference = database.getReference("Player DB")
+            if(reference!=null) {
+                //crea un fill amb els valors de dadesJugador
+                reference.child(uidString).setValue(dadesJugador)
+                Toast.makeText(
+                    this, "USUARI BEN REGISTRAT",
+                    Toast.LENGTH_SHORT
+                ).show()
+                val intent = Intent(this, Register::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "ERROR BD", Toast.LENGTH_SHORT).show()
+            }
 
         }
         else
         {
             Toast.makeText( this,"ERROR CREATE USER",Toast.LENGTH_SHORT).show()
         }
+        finish()
     }
 
 }

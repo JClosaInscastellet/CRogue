@@ -6,4 +6,8 @@
     <string name="Name">Name</string>
     <string name="Password">Password</string>
     <string name="Date">Date</string>
+    <string name="correoLogin">E-mail</string>
+    <string name="passLogin">Password</string>
+    <string name="BtnLogin">LOGIN</string>
+
 </resources>

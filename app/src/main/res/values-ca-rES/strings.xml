@@ -7,4 +7,8 @@
     <string name="Name">Nom</string>
     <string name="Password">Contrasenys</string>
     <string name="Date">Data</string>
+    <string name="correoLogin">E-mail</string>
+    <string name="passLogin">Contrasenya</string>
+    <string name="BtnLogin">ENTRAR</string>
+
 </resources>

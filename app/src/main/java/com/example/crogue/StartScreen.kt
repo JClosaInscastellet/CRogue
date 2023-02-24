@@ -14,8 +14,8 @@ class StartScreen : AppCompatActivity() {
         val registerbtn = findViewById<Button>(R.id.BTMREGISTRO)
 
         loginbtn.setOnClickListener(){
-            Toast.makeText(this, "click botó " +
-                    "login",Toast.LENGTH_LONG).show();
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
 
         registerbtn.setOnClickListener(){
