@@ -1,5 +1,6 @@
 package com.example.crogue
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -18,8 +19,8 @@ class StartScreen : AppCompatActivity() {
         }
 
         registerbtn.setOnClickListener(){
-            Toast.makeText(this, "click botó " +
-                    "register",Toast.LENGTH_LONG).show();
+            val intent = Intent(this, Register::class.java)
+            startActivity(intent)
         }
     }
 

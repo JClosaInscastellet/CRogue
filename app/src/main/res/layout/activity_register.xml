@@ -20,7 +20,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:hint="@string/EMail" />
+            android:hint="@string/EMail"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
         <!-- forcem que la entrada sigui un correu electronic -->
 
         <!-- ENTREM EL PASSWORD -->
@@ -29,7 +32,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="@string/Password" />
+            android:hint="@string/Password"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
         <!-- forcem que la entrada sigui un password -->
 
 
@@ -38,7 +43,9 @@
             android:id="@+id/nombreEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-        android:hint="@string/Name" />
+            android:hint="@string/Name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"/>
 
         <!-- DATA ACTUAL -->
         <TextView
@@ -49,6 +56,8 @@
             android:hint="@string/Date"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             />
 
         <!-- BOTO DE ENTRAR -->
