@@ -10,5 +10,14 @@
     <string name="correoLogin">E-mail</string>
     <string name="passLogin">Contrasenya</string>
     <string name="BtnLogin">ENTRAR</string>
+    <string name="play">JUGAR</string>
+    <string name="score">PUNTUACIÓ</string>
+    <string name="credits">CRÈDITS</string>
+    <string name="close_session">TANCAR SESSIÓ</string>
+    <string name="socres">PUNTUACIONS</string>
+    <string name="uid">--</string>
+    <string name="user_email">--</string>
+    <string name="user_name">--</string>
+    <string name="user_score">--</string>
 
 </resources>
