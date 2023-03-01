@@ -11,6 +11,13 @@ import com.google.firebase.auth.FirebaseUser
 
 class StartScreen : AppCompatActivity() {
 
+    //Test per si c++ va
+    companion object {
+        private external fun return32():String
+        init {
+            System.loadLibrary("crogue")
+        }
+    }
     //per a comprovar si la sessió esta inicialitzada
     lateinit var auth: FirebaseAuth
     var user: FirebaseUser? = null;
@@ -27,6 +34,7 @@ class StartScreen : AppCompatActivity() {
 
         val loginbtn = findViewById<Button>(R.id.BTMLOGIN)
         loginbtn.setTypeface(tf2)
+        loginbtn.text = return32()
         val registerbtn = findViewById<Button>(R.id.BTMREGISTRO)
         registerbtn.setTypeface(tf2)
 
