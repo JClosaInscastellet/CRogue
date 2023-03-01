@@ -38,24 +38,38 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        //Aquí creem un tipus de lletra a partir de una font
-        val tf = Typeface.createFromAsset(assets,"fonts/regular.ttf")
-
         auth= FirebaseAuth.getInstance()
         user =auth.currentUser
+
+        //Aquí creem un tipus de lletra a partir de una font
+        val tf = Typeface.createFromAsset(assets,"fonts/regular.ttf")
+        val tf2 = Typeface.createFromAsset(assets,"fonts/secondfont.ttf")
+
+
         //buscar text per asignar-li tipus de lletra
         puntuaciotxt=findViewById(R.id.myScoretxt)
+
+        puntuaciotxt.setTypeface(tf2)
         puntuaciotxt.setTypeface(tf)
+
         puntuacio=findViewById(R.id.scores)
+        puntuacio.setTypeface(tf2)
         uid=findViewById(R.id.uid)
+        uid.setTypeface(tf)
         correo=findViewById(R.id.email)
+        correo.setTypeface(tf)
         nom=findViewById(R.id.name)
+        nom.setTypeface(tf2)
 
         //asignar botones
         tancarSessio =findViewById<Button>(R.id.closeSessionBtn)
+        tancarSessio.setTypeface(tf2) //cambiar tipus de font
         CreditsBtn =findViewById<Button>(R.id.CreditsBtn)
+        CreditsBtn.setTypeface(tf2)
         PuntuacionsBtn =findViewById<Button>(R.id.scoresBtn)
+        PuntuacionsBtn.setTypeface(tf2)
         jugarBtn =findViewById<Button>(R.id.playBtn)
+        jugarBtn.setTypeface(tf2)
 
         tancarSessio.setOnClickListener(){
             tancalaSessio()

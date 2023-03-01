@@ -1,6 +1,7 @@
 package com.example.crogue
 
 import android.content.Intent
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -27,12 +28,17 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        //Aquí creem un tipus de lletra a partir de una font
+        val tf2 = Typeface.createFromAsset(assets,"fonts/secondfont.ttf")
+
         //Init vars
         correoEt =findViewById<EditText>(R.id.correoEt)
         passEt =findViewById<EditText>(R.id.passEt)
         nombreEt =findViewById<EditText>(R.id.nombreEt)
         fechaTxt =findViewById<TextView>(R.id.fechaEt)
         Registrar =findViewById<Button>(R.id.Registrar)
+        Registrar.setTypeface(tf2)
         //Date
         val date = Calendar.getInstance().time
         val formatter = SimpleDateFormat.getDateInstance() //or use

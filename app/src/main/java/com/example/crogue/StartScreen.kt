@@ -1,6 +1,7 @@
 package com.example.crogue
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -17,13 +18,17 @@ class StartScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_startscreen)
 
+        //IMPORTAR font
+        val tf2 = Typeface.createFromAsset(assets,"fonts/secondfont.ttf")
+
         //assigna valor a user
         auth = FirebaseAuth.getInstance()
         user = auth.currentUser
 
         val loginbtn = findViewById<Button>(R.id.BTMLOGIN)
+        loginbtn.setTypeface(tf2)
         val registerbtn = findViewById<Button>(R.id.BTMREGISTRO)
-
+        registerbtn.setTypeface(tf2)
 
         loginbtn.setOnClickListener(){
             val intent = Intent(this, Login::class.java)

@@ -1,6 +1,7 @@
 package com.example.crogue
 
 import android.content.Intent
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -18,10 +19,15 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        //IMPORTAR font
+        val tf2 = Typeface.createFromAsset(assets,"fonts/secondfont.ttf")
+
         auth = FirebaseAuth.getInstance()
         correoLogin =findViewById<EditText>(R.id.correoLogin)
         passLogin =findViewById<EditText>(R.id.passLogin)
         BtnLogin =findViewById<Button>(R.id.btnLogin)
+        BtnLogin.setTypeface(tf2) //cambiar font
         BtnLogin.setOnClickListener(){
             //Abans de fer el registre validem les dades
             var email:String = correoLogin.getText().toString()

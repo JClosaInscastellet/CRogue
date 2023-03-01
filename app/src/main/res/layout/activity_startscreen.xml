@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#050505"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#742369"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="32px">
 
+        <!-- Imatge LOGO -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:id="@+id/logoImage"
+            android:src="@drawable/segundologo" />
         <Button
             android:id="@+id/BTMLOGIN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Login" />
+            android:text="@string/Login"
+            android:textSize="20sp"
+            android:background="@drawable/mybutton"
+            android:textColor="@color/white"/>
         <!--botó de registrar-se -->
         <Button
             android:id="@+id/BTMREGISTRO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Register" />
+            android:text="@string/Register"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mybutton"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </RelativeLayout>

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#050505"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu">
@@ -20,55 +21,62 @@
             android:text="@string/score"
             android:textSize="30sp"
             android:gravity="center"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
         <!-- contingut puntuació -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/scores"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:text="@string/user_score"
             android:gravity="center"
-            android:textAlignment="center"/>
-        <!-- Imatge alien -->
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+        <!-- Imatge LOGO -->
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="180dp"
+            android:layout_width="300dp"
             android:layout_height="180dp"
             android:id="@+id/logoImage"
-            android:src="@drawable/crouge_logo" />
+            android:src="@drawable/segundologo"
+            android:textColor="@color/white"/>
         <!-- uid -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/uid"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:text="@string/uid"
             android:gravity="center"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
         <!-- correu -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/email"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:text="@string/user_email"
             android:gravity="center"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
 
         <!-- nom -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/name"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:text="@string/user_name"
             android:gravity="center"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
         <!-- BOTO DE jugar -->
         <Button
             android:id="@+id/playBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="@string/play"
             android:layout_marginTop="10dp"
             android:background="@drawable/mybutton"
@@ -80,6 +88,7 @@
             android:id="@+id/scoresBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="@string/socres"
             android:layout_marginTop="10dp"
             android:background="@drawable/mybutton"
@@ -90,6 +99,7 @@
             android:id="@+id/CreditsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="@string/credits"
             android:layout_marginTop="10dp"
             android:background="@drawable/mybutton"
@@ -102,6 +112,7 @@
             android:layout_height="wrap_content"
             android:text="@string/close_session"
             android:layout_marginTop="10dp"
+            android:textSize="20sp"
             android:background="@drawable/mybutton"
             android:textColor="@color/white"
             />

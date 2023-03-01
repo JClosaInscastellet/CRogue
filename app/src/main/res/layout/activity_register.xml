@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#742369"
+    android:background="#000000"
     tools:context=".Register">
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,13 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="30dp">
+        <!-- Imatge LOGO -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="300dp"
+            android:layout_height="180dp"
 
+            android:id="@+id/logoImage"
+            android:src="@drawable/segundologo" />
         <!-- ENTREM EL MAIL -->
         <EditText
             android:id="@+id/correoEt"
@@ -65,8 +71,11 @@
             android:id="@+id/Registrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="@string/Register"
             android:layout_marginTop="10dp"
+            android:background="@drawable/mybutton"
+            android:textColor="@color/white"
             />
     </LinearLayout>
 </RelativeLayout>
