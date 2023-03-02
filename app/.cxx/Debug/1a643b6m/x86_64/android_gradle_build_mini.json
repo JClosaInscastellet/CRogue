@@ -1,0 +1,34 @@
+{
+  "buildFiles": [
+    "/home/judit/AndroidStudioProjects/CRogue/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/judit/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/judit/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "crogue::@6890427a1f51a3e7e1df": {
+      "artifactName": "crogue",
+      "abi": "x86_64",
+      "output": "/home/judit/AndroidStudioProjects/CRogue/app/build/intermediates/cxx/Debug/1a643b6m/obj/x86_64/libcrogue.so",
+      "runtimeFiles": [
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/x86_64/libopenal.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/x86_64/libsfml-audio.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/x86_64/libsfml-system.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/x86_64/libsfml-window.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/x86_64/libsfml-graphics.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/x86_64/libsfml-activity.so"
+      ]
+    }
+  }
+}

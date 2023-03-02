@@ -15,17 +15,3 @@
 //         System.loadLibrary("crogue")
 //      }
 //    }
-#include <string>
-#include <jni.h>
-
-char* return32(){
-    char* login = "Login";
-    return login;
-}
-
-extern "C"
-JNIEXPORT jstring JNICALL
-Java_com_example_crogue_StartScreen_00024Companion_return32(JNIEnv *env, jobject thiz) {
-    // TODO: implement return32()
-    return (env)->NewStringUTF(return32());
-}

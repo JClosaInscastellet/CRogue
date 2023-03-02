@@ -1,0 +1,34 @@
+{
+  "buildFiles": [
+    "/home/judit/AndroidStudioProjects/CRogue/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/judit/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/judit/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "crogue::@6890427a1f51a3e7e1df": {
+      "artifactName": "crogue",
+      "abi": "armeabi-v7a",
+      "output": "/home/judit/AndroidStudioProjects/CRogue/app/build/intermediates/cxx/Debug/1a643b6m/obj/armeabi-v7a/libcrogue.so",
+      "runtimeFiles": [
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/armeabi-v7a/libopenal.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/armeabi-v7a/libsfml-audio.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/armeabi-v7a/libsfml-system.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/armeabi-v7a/libsfml-window.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/armeabi-v7a/libsfml-graphics.so",
+        "/home/judit/AndroidStudioProjects/CRogue/SFML/lib/armeabi-v7a/libsfml-activity.so"
+      ]
+    }
+  }
+}
