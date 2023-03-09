@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "crogue",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "crogue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crogue-Debug-31f9e6e5ac238595b648.json",
+					"name" : "crogue",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "native-activity::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-native-activity-Debug-8e5a2c714ecad28cdd80.json",
+					"name" : "native-activity",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "native_app_glue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-native_app_glue-Debug-00b03e79c098c5b8193b.json",
+					"name" : "native_app_glue",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/2s41q255/x86",
+		"source" : "C:/Users/user/AndroidStudioProjects/CRogue/app/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

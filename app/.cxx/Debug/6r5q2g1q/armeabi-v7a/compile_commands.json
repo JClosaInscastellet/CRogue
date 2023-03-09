@@ -1,0 +1,17 @@
+[
+{
+  "directory": "C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/6r5q2g1q/armeabi-v7a",
+  "command": "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi24 --sysroot=C:/Users/user/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -IC:/Users/user/AndroidStudioProjects/CRogue/app/src/main/cpp/../../../../sfml/include -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -o CMakeFiles\\native_app_glue.dir\\C_\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\sources\\android\\native_app_glue\\android_native_app_glue.c.o -c C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\sources\\android\\native_app_glue\\android_native_app_glue.c",
+  "file": "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\sources\\android\\native_app_glue\\android_native_app_glue.c"
+},
+{
+  "directory": "C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/6r5q2g1q/armeabi-v7a",
+  "command": "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=C:/Users/user/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -IC:/Users/user/AndroidStudioProjects/CRogue/app/src/main/cpp/../../../../sfml/include -std=c++11 -fexceptions -frtti -g  -fno-limit-debug-info -o CMakeFiles\\native-activity.dir\\crogue.cpp.o -c C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\src\\main\\cpp\\crogue.cpp",
+  "file": "C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\src\\main\\cpp\\crogue.cpp"
+},
+{
+  "directory": "C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/6r5q2g1q/armeabi-v7a",
+  "command": "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=C:/Users/user/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dcrogue_EXPORTS -IC:/Users/user/AndroidStudioProjects/CRogue/app/src/main/cpp/../../../../sfml/include -IC:/Users/user/AndroidStudioProjects/CRogue/app/src/main/cpp/native-activity -IC:/Users/user/AppData/Local/Android/Sdk/ndk/23.1.7779620/sources/android/native_app_glue -std=c++11 -fexceptions -frtti -g  -fno-limit-debug-info -fPIC -o CMakeFiles\\crogue.dir\\crogue.cpp.o -c C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\src\\main\\cpp\\crogue.cpp",
+  "file": "C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\src\\main\\cpp\\crogue.cpp"
+}
+]

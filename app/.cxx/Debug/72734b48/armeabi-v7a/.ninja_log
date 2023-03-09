@@ -1,0 +1,15 @@
+# ninja log v5
+13	379	6999128437001823	CMakeFiles/native-activity.dir/crogue.cpp.o	d423f2cb8a7b282d
+583	801	6999124191149684	libnative_app_glue.a	967aa5be20085772
+6	388	6999128436981864	CMakeFiles/crogue.dir/crogue.cpp.o	6f9bf57334b875e6
+853	1219	6999128445377975	C:/Users/user/AndroidStudioProjects/CRogue/app/build/intermediates/cxx/Debug/72734b48/obj/armeabi-v7a/libcrogue.so	a34e7d23d93b9dd1
+18	582	6999124188387883	CMakeFiles/native_app_glue.dir/C_/Users/user/AppData/Local/Android/Sdk/ndk/23.1.7779620/sources/android/native_app_glue/android_native_app_glue.c.o	86dd20941373ab1d
+2	418	6999131020909213	build.ninja	2ac625899cc0d2c0
+380	852	6999128441179647	libnative-activity.a	832f47d3aee341d1
+1	87	0	clean	d0ed652a55d7c727
+50	681	6999131033283489	CMakeFiles/native-activity.dir/crogue.cpp.o	d423f2cb8a7b282d
+59	1238	6999131031438066	CMakeFiles/crogue.dir/crogue.cpp.o	6f9bf57334b875e6
+8	2865	6999131035659275	CMakeFiles/native_app_glue.dir/C_/Users/user/AppData/Local/Android/Sdk/ndk/23.1.7779620/sources/android/native_app_glue/android_native_app_glue.c.o	86dd20941373ab1d
+682	3294	6999131056574808	libnative-activity.a	832f47d3aee341d1
+2866	3342	6999131059259380	libnative_app_glue.a	967aa5be20085772
+3343	4181	6999131068427976	C:/Users/user/AndroidStudioProjects/CRogue/app/build/intermediates/cxx/Debug/72734b48/obj/armeabi-v7a/libcrogue.so	a34e7d23d93b9dd1

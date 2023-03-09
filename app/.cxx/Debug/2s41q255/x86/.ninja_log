@@ -1,0 +1,6 @@
+# ninja log v5
+9	205	6999140108626295	CMakeFiles/crogue.dir/crogue.cpp.o	c3b535e980d99a11
+601	701	6999139862401652	libnative_app_glue.a	e5a1a8e53bc326b7
+4	197	6999140108616324	CMakeFiles/native-activity.dir/crogue.cpp.o	90f3ff6ef5537be
+198	325	6999140109653662	libnative-activity.a	832f47d3aee341d1
+2	600	6999139858914458	CMakeFiles/native_app_glue.dir/C_/Users/user/AppData/Local/Android/Sdk/ndk/25.2.9519653/sources/android/native_app_glue/android_native_app_glue.c.o	30a7de34e36ab20a
