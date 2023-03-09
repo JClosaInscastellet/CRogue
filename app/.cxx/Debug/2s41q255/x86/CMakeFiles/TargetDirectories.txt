@@ -1,5 +1,0 @@
-C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/2s41q255/x86/CMakeFiles/native_app_glue.dir
-C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/2s41q255/x86/CMakeFiles/native-activity.dir
-C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/2s41q255/x86/CMakeFiles/crogue.dir
-C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/2s41q255/x86/CMakeFiles/edit_cache.dir
-C:/Users/user/AndroidStudioProjects/CRogue/app/.cxx/Debug/2s41q255/x86/CMakeFiles/rebuild_cache.dir

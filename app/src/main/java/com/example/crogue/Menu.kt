@@ -81,7 +81,9 @@ class Menu : AppCompatActivity() {
             Toast.makeText(this,"Puntuacions", Toast.LENGTH_SHORT).show()
         }
         jugarBtn.setOnClickListener(){
-            Toast.makeText(this,"JUGAR", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, GameActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         consulta() //Aquesta funció busca a la base de dades les dades de l'usuari i les mostre per pantalla

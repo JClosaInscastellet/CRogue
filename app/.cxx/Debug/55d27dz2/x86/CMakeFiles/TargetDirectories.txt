@@ -1,3 +1,3 @@
-C:/Users/Judit/Documents/CRogue/app/.cxx/Debug/55d27dz2/x86/CMakeFiles/crogue.dir
-C:/Users/Judit/Documents/CRogue/app/.cxx/Debug/55d27dz2/x86/CMakeFiles/edit_cache.dir
-C:/Users/Judit/Documents/CRogue/app/.cxx/Debug/55d27dz2/x86/CMakeFiles/rebuild_cache.dir
+/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/55d27dz2/x86/CMakeFiles/crogue.dir
+/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/55d27dz2/x86/CMakeFiles/edit_cache.dir
+/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/55d27dz2/x86/CMakeFiles/rebuild_cache.dir

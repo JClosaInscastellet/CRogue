@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/55d27dz2/arm64-v8a",
+  "command": "/home/judit/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android24 --sysroot=/home/judit/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dcrogue_EXPORTS -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -g  -fno-limit-debug-info -fPIC -o CMakeFiles/crogue.dir/crogue.cpp.o -c /home/judit/AndroidStudioProjects/CRogue/app/src/main/cpp/crogue.cpp",
+  "file": "/home/judit/AndroidStudioProjects/CRogue/app/src/main/cpp/crogue.cpp"
+}
+]
