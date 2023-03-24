@@ -106,6 +106,7 @@ class Menu : AppCompatActivity() {
             finish()
         }
     }
+
     //Aquesta funció busca a la base de dades les dades de l'usuari i les mostre per pantalla
     private fun consulta(){
         var database: FirebaseDatabase = FirebaseDatabase.getInstance("https://crogue-357e6-default-rtdb.europe-west1.firebasedatabase.app/")

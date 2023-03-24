@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "/home/judit/AndroidStudioProjects/CRogue/app/src/main/cpp/CMakeLists.txt"
+    "C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
-      "/home/judit/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
-      "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/55d27dz2/x86",
+      "C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\.cxx\\Debug\\55d27dz2\\x86",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "/home/judit/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
-    "/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/55d27dz2/x86",
+    "C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\.cxx\\Debug\\55d27dz2\\x86",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
@@ -21,14 +21,16 @@
       "toolchain": "toolchain",
       "abi": "x86",
       "artifactName": "crogue",
-      "output": "/home/judit/AndroidStudioProjects/CRogue/app/build/intermediates/cxx/Debug/55d27dz2/obj/x86/libcrogue.so",
-      "runtimeFiles": []
+      "output": "C:\\Users\\user\\AndroidStudioProjects\\CRogue\\app\\build\\intermediates\\cxx\\Debug\\55d27dz2\\obj\\x86\\libcrogue.so",
+      "runtimeFiles": [
+        "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\i686-linux-android\\24\\liblog.so"
+      ]
     }
   },
   "toolchains": {
     "toolchain": {
-      "cCompilerExecutable": "/home/judit/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
-      "cppCompilerExecutable": "/home/judit/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+      "cCompilerExecutable": "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\user\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
     }
   },
   "cFileExtensions": [],
