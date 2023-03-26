@@ -16,12 +16,12 @@ class list_players : AppCompatActivity() {
         Player("Pepe",12,"https://www.kasandbox.org/programming-images/avatars/piceratops-tree.png"),
         Player("Juanito",102,"https://www.kasandbox.org/programming-images/avatars/leafers-seed.png"),
         Player("Jaimito",18,"https://www.kasandbox.org/programming-images/avatars/leaf-yellow.png"),
-        Player("Jorgito",98,"https://www.kasandbox.org/programming-images/avatars/leaf-blue.png")
+        Player("Jorgito",98,"https://www.  kasandbox.org/programming-images/avatars/leaf-blue.png")
     )
     lateinit var reference: DatabaseReference
     lateinit var auth: FirebaseAuth
     var user: FirebaseUser? = null;
-    var usersName= arrayListOf<String>() //array donde guardar la  de los usuarios
+    var usersData= arrayListOf<String>() //array donde guardar la  de los usuarios
     var usersScore= arrayListOf<String>() //array donde guardar las puntuaciones
 
 
@@ -33,7 +33,7 @@ class list_players : AppCompatActivity() {
         auth= FirebaseAuth.getInstance()
         user =auth.currentUser
         // getting ImageView by its id
-        initRecyclerView()
+        //initRecyclerView()
         getUsers()
     }
     fun initRecyclerView(){
@@ -49,16 +49,17 @@ class list_players : AppCompatActivity() {
         
         bdreference.addValueEventListener (object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                Log.i ("pepe","arrel value"+ snapshot.getValue().toString())
-                Log.i ("pepe","arrel key"+ snapshot.key.toString())
+                //Log.i ("pepe","arrel value"+ snapshot.getValue().toString())
+                //Log.i ("pepe","arrel key"+ snapshot.key.toString())
 
 
                 for (ds in snapshot.getChildren()) {
                     val name = ds.child("Nom").getValue().toString()
                     val score = ds.child("Puntuacio").getValue().toString()
                     Log.d("pepe", name)
-                    usersName.add(name)
-                    usersScore.add(score)
+                    Log.d("pepe", score)
+                    usersData.add(name)
+                    usersData.add(score)
                 }
             }
             override fun onCancelled(error: DatabaseError) {
