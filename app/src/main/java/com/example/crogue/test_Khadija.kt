@@ -523,7 +523,6 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                     dethSoung.start()
                     updateUserPoints()
                     changeActivity()
-                    finish()
                 }
                 handler.postDelayed(this, 100)//1 sec delay
             }
