@@ -75,14 +75,18 @@ class Menu : AppCompatActivity() {
             tancalaSessio()
         }
         CreditsBtn.setOnClickListener(){
-            Toast.makeText(this,"Credits", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, Credits::class.java)
+            startActivity(intent)
         }
         PuntuacionsBtn.setOnClickListener(){
-            Toast.makeText(this,"Puntuacions", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, list_players::class.java)
+            startActivity(intent)
+
         }
         jugarBtn.setOnClickListener(){
-            val intent= Intent(this, GameActivity::class.java)
+            val intent= Intent(this, test_Khadija::class.java)
             startActivity(intent)
+
             finish()
         }
 
@@ -151,6 +155,7 @@ class Menu : AppCompatActivity() {
 
 
     }
+
     private fun tancalaSessio() {
         auth.signOut() //tanca la sessió
         //va a la pantalla inicial

@@ -12,60 +12,75 @@ import com.google.firebase.database.*
 
 
 class list_players : AppCompatActivity() {
-    val players = listOf<Player>(
-        Player("Pepe",12,"https://www.kasandbox.org/programming-images/avatars/piceratops-tree.png"),
-        Player("Juanito",102,"https://www.kasandbox.org/programming-images/avatars/leafers-seed.png"),
-        Player("Jaimito",18,"https://www.kasandbox.org/programming-images/avatars/leaf-yellow.png"),
-        Player("Jorgito",98,"https://www.  kasandbox.org/programming-images/avatars/leaf-blue.png")
+
+    val players = mutableListOf<Player>()
+
+    val images = listOf < String >(
+        "https://www.kasandbox.org/programming-images/avatars/piceratops-tree.png",
+        "https://www.kasandbox.org/programming-images/avatars/leafers-seed.png",
+        "https://www.kasandbox.org/programming-images/avatars/leaf-yellow.png",
+        "https://www.kasandbox.org/programming-images/avatars/leaf-blue.png"
     )
-    lateinit var reference: DatabaseReference
+
     lateinit var auth: FirebaseAuth
     var user: FirebaseUser? = null;
-    var usersData= arrayListOf<String>() //array donde guardar la  de los usuarios
-    var usersScore= arrayListOf<String>() //array donde guardar las puntuaciones
-
+    var cont = 0
+    var image = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lplayers)
 
-        auth= FirebaseAuth.getInstance()
-        user =auth.currentUser
-        // getting ImageView by its id
-        //initRecyclerView()
+        auth = FirebaseAuth.getInstance()
+        user = auth.currentUser
+
         getUsers()
+
     }
-    fun initRecyclerView(){
-        val recyclerView=findViewById<RecyclerView>(R.id.RecyclerOne)
-        recyclerView.layoutManager= LinearLayoutManager(this)
-        recyclerView.adapter=PlayerAdapter(players)
+
+    fun initRecyclerView() {
+        val recyclerView = findViewById<RecyclerView>(R.id.RecyclerOne)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = PlayerAdapter(players)
     }
-    private fun getUsers(){
+
+    private fun getUsers() {
 
         var database: FirebaseDatabase = FirebaseDatabase.getInstance("https://crogue-357e6-default-rtdb.europe-west1.firebasedatabase.app/")
         var bdreference: DatabaseReference = database.getReference("Player DB")
-        val getImage: DatabaseReference = bdreference.child("image")
-        
-        bdreference.addValueEventListener (object: ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                //Log.i ("pepe","arrel value"+ snapshot.getValue().toString())
-                //Log.i ("pepe","arrel key"+ snapshot.key.toString())
 
+
+        bdreference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
 
                 for (ds in snapshot.getChildren()) {
                     val name = ds.child("Nom").getValue().toString()
                     val score = ds.child("Puntuacio").getValue().toString()
-                    Log.d("pepe", name)
-                    Log.d("pepe", score)
-                    usersData.add(name)
-                    usersData.add(score)
+
+                    getImage() //obtener imágenes por orden
+                    val newPlayer =Player(nom_jugador = name, puntuacio = score.toInt(), foto = image)
+                    players.add(newPlayer) //añadir a lista de jugadores
+
                 }
+
+                initRecyclerView() //una vez la lista de jugadores ya está completa se llama a la recycleview
             }
+
             override fun onCancelled(error: DatabaseError) {
-                Log.d ("pepe","ERROR DATABASE CANCEL")
+                Log.d("pepe", "ERROR DATABASE CANCEL")
             }
         })
+    }
+
+    private fun getImage() {
+        image = images[cont]
+        //Log.d("kk", "**imagen " + image + " contador" + cont)
+        if (cont >= images.size-1) {
+            cont = 0
+        } else {
+            cont += 1
+        }
     }
 
 }

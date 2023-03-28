@@ -1,25 +1,42 @@
 package com.example.crogue
 
 
+import android.content.Intent
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
+import com.google.firebase.ktx.Firebase
+import java.util.HashMap
 import kotlin.random.Random
 
 
 class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
+    var user: FirebaseUser? = null;
+    lateinit var auth: FirebaseAuth
     lateinit var tv: TextView
     var secondsLeft = 0
     lateinit var mainHandler: Handler
     var puntuation = 0;
     var maxHp = 20;
     var hp = 20;
-
+    var currentUID = ""
+    //SONIDOS
+    lateinit var coinsound: MediaPlayer
+    lateinit var hitEnemySound: MediaPlayer
+    lateinit var dethSoung: MediaPlayer
+    lateinit var changeLevelSound: MediaPlayer
+    lateinit var backgroundMusic: MediaPlayer
 
     // Declaring gesture detector, swipe threshold, and swipe velocity threshold
     private lateinit var gestureDetector: GestureDetector
@@ -91,10 +108,12 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                 if (first[playerX + 1][playerY] == '#') {
 
                 } else if (first[playerX + 1][playerY] == 'E') {
+                    changeLevelSound.start()
                     recreate()
                     //finish()
                     //startActivity(intent)
                 } else if (first[playerX + 1][playerY] == 'U') {
+                    hitEnemySound.start()
                     for (i in 0..enemys.size - 1) {
                         //comprovar up del enemigo
                         if (first[enemys[i].get("x")!! - 1][enemys[i].get("y")!!] == '@') {
@@ -120,6 +139,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
 
                 } else {
                     if (first[playerX + 1][playerY] == '*') {
+                        coinsound.start()
                         puntuation += 5;
                         first[playerX + 1][playerY] = '@'
                         first[playerX][playerY] = '·'
@@ -143,6 +163,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                     //finish()
                     //startActivity(intent)
                 } else if (first[playerX - 1][playerY] == 'U') {
+                    hitEnemySound.start()
                     for (i in 0..enemys.size - 1) {
                         //comprovar down del enemigo
                         if (first[enemys[i].get("x")!! + 1][enemys[i].get("y")!!] == '@') {
@@ -168,6 +189,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
 
                 } else {
                     if (first[playerX - 1][playerY] == '*') {
+                        coinsound.start()
                         puntuation += 5;
                         first[playerX - 1][playerY] = '@'
                         first[playerX][playerY] = '·'
@@ -191,6 +213,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                     //finish()
                     //startActivity(intent)
                 } else if (first[playerX][playerY - 1] == 'U') {
+                    hitEnemySound.start()
                     for (i in 0..enemys.size + 1) {
                         //comprovar la derecha del enemigo
                         if (first[enemys[i].get("x")!!][enemys[i].get("y")!! - 1] == '@') {
@@ -215,6 +238,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                     }
                 } else {
                     if (first[playerX][playerY + 1] == '*') {
+                        coinsound.start()
                         puntuation += 5;
                         first[playerX][playerY + 1] = '@'
                         first[playerX][playerY] = '·'
@@ -240,6 +264,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                     //finish()
                     //startActivity(intent)
                 } else if (first[playerX][playerY - 1] == 'U') {
+                    hitEnemySound.start()
                     for (i in 0..enemys.size - 1) {
                         //comprovar la derecha del enemigo
                         if (first[enemys[i].get("x")!!][enemys[i].get("y")!! + 1] == '@') {
@@ -264,6 +289,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                     }
                 } else {
                     if (first[playerX][playerY - 1] == '*') {
+                        coinsound.start()
                         puntuation += 5;
                         first[playerX][playerY - 1] = '@'
                         first[playerX][playerY] = '·'
@@ -324,6 +350,23 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
     //---------------------------------------
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //var para imortar sonidos
+        coinsound = MediaPlayer.create(this, R.raw.coinsound);
+        hitEnemySound = MediaPlayer.create(this, R.raw.collisionenemi);
+        dethSoung = MediaPlayer.create(this, R.raw.dethsound);
+        changeLevelSound= MediaPlayer.create(this, R.raw.levelchange);
+        backgroundMusic= MediaPlayer.create(this, R.raw.background);
+
+        coinsound.setVolume(100f , 100f);
+        hitEnemySound.setVolume(100f , 100f);
+        dethSoung.setVolume(100f , 100f);
+        backgroundMusic.setVolume(70f , 70f);
+        //    backgroundMusic.start()
+
+        auth = FirebaseAuth.getInstance()
+        user =auth.currentUser
+
         setContentView(R.layout.activity_test_khadija)
         tv = findViewById(R.id.textView)
 
@@ -433,7 +476,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                 mutableMapOf<String, Int>(
                     "x" to x,
                     "y" to y,
-                    "atk" to 3,
+                    "atk" to 20, //PROVISIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
                     "hp" to 5
                 )
             )
@@ -474,9 +517,23 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                             "\t   HP: " + hp.toString() + "/" + maxHp.toString() +
                             "\t   ATK: " + playerAtk.toString() + "\n" + log
                 )
+                if (hp <= 0) { //si el jugador pierde se muestra la pantalla de game over
+
+                    Toast.makeText(applicationContext, "GAME OVER", Toast.LENGTH_SHORT).show()
+                    dethSoung.start()
+                    updateUserPoints()
+                    changeActivity()
+                    finish()
+                }
                 handler.postDelayed(this, 100)//1 sec delay
             }
         }, 0)
+    }
+
+    fun changeActivity() {
+
+        val intent = Intent(this, Menu::class.java)
+        startActivity(intent)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -494,7 +551,66 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
         maxHp = savedInstanceState.getInt("maxHp")
         playerAtk = savedInstanceState.getInt("playerAtk")
         hp = savedInstanceState.getInt("hp")
-        Toast.makeText(applicationContext, "puntuation: " + puntuation.toString(), Toast.LENGTH_LONG).show()
+        Toast.makeText(
+            applicationContext,
+            "puntuation: " + puntuation.toString(),
+            Toast.LENGTH_LONG
+        ).show()
 
+    }
+
+
+    private fun updateUserPoints() {
+        var database: FirebaseDatabase =
+            FirebaseDatabase.getInstance("https://crogue-357e6-default-rtdb.europe-west1.firebasedatabase.app/")
+        var bdreference: DatabaseReference = database.getReference("Player DB")
+
+        //val user = Firebase.auth.currentUser
+        Log.d("DEBUG", "--- ha entrado a user??")
+        var contador=0
+        user?.let {
+
+            for (profile in it.providerData) {
+                // Id of the provider (ex: google.com)
+                val providerId = profile.providerId
+
+                // UID specific to the provider
+                if(contador==0){
+                    currentUID = profile.uid
+                }
+                contador+=1
+            }
+
+        }
+
+        bdreference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                // ara capturem tots els fills
+                var trobat: Boolean = false
+                for (ds in snapshot.getChildren()) {
+
+                    //carrega els textview
+                    val USERID = ds.child("Uid").getValue().toString()
+
+                    if (USERID == currentUID) {
+
+                        val userPoints=ds.child("Puntuacio").getValue().toString()
+                        //si la puntuación actual es más grande que la que hay guardada en la bbdd entonces se actualiza
+                        if(puntuation > userPoints.toInt() ) {
+
+                            bdreference.child(currentUID).child("Puntuacio").setValue(puntuation).toString()
+
+                        }
+
+                    }else{
+
+                    }
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 }
