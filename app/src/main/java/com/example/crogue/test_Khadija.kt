@@ -476,7 +476,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                 mutableMapOf<String, Int>(
                     "x" to x,
                     "y" to y,
-                    "atk" to 20, //PROVISIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+                    "atk" to 5, //ATAQUE ENEMIGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
                     "hp" to 5
                 )
             )
