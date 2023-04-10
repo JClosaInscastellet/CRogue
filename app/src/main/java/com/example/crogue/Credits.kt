@@ -10,12 +10,12 @@ class Credits : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_credits)
-        bt_menu =findViewById<Button>(R.id.bt_manu)
+     //   bt_menu =findViewById<Button>(R.id.bt_manu)
 
-        bt_menu.setOnClickListener(){
-            val intent= Intent(this, Menu::class.java)
-            startActivity(intent)
-        }
+      //  bt_menu.setOnClickListener(){
+       //     val intent= Intent(this, Menu::class.java)
+           // startActivity(intent)
+      //  }
     }
 
 }

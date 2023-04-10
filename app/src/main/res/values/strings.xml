@@ -22,5 +22,7 @@
     <string name="Creditstxt">This game was  created by:</string>
     <string name="judit">Judit Closa Cancho</string>
     <string name="khadija">Khadija El Hady Ouhda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
