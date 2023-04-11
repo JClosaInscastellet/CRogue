@@ -16,24 +16,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++11 -fexceptions -frtti"
-                arguments '-DANDROID_STL=c++_shared'
-            }
-        }
-        sourceSets {
-            main {
-                jniLibs.srcDirs = ['../sfml/lib/']
-            }
-        }
-        ndk {
-            abiFilters "armeabi-v7a", "x86"
-        }
+
     }
 
     buildTypes {
-
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -46,12 +32,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    externalNativeBuild {
-        cmake {
-            path file('src/main/cpp/CMakeLists.txt')
-            version '3.22.1'
-        }
-    }
+
 }
 
 dependencies {
@@ -69,4 +50,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-database-ktx'
+
+    implementation 'com.squareup.picasso:picasso:2.8'
 }

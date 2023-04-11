@@ -19,5 +19,9 @@
     <string name="user_email">--</string>
     <string name="user_name">--</string>
     <string name="user_score">--</string>
+    <string name="bt_menu">MENÚ</string>
+    <string name="Creditstxt">Aquest joc va ser creat per:</string>
+    <string name="judit">Judit Closa Cancho</string>
+    <string name="khadija">Khadija El Hady Ouhda</string>
 
 </resources>

@@ -38,7 +38,9 @@ class Splash : AppCompatActivity() {
     }
     fun changeActivity(){
         //Change activiry
+        //val intent = Intent(this, list_players::class.java)
         val intent = Intent(this, StartScreen::class.java)
+
         startActivity(intent)
     }
 }

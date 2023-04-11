@@ -75,13 +75,19 @@ class Menu : AppCompatActivity() {
             tancalaSessio()
         }
         CreditsBtn.setOnClickListener(){
-            Toast.makeText(this,"Credits", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, Credits::class.java)
+            startActivity(intent)
         }
         PuntuacionsBtn.setOnClickListener(){
-            Toast.makeText(this,"Puntuacions", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, list_players::class.java)
+            startActivity(intent)
+
         }
         jugarBtn.setOnClickListener(){
-            Toast.makeText(this,"JUGAR", Toast.LENGTH_SHORT).show()
+            val intent= Intent(this, test_Khadija::class.java)
+            startActivity(intent)
+
+            finish()
         }
 
         consulta() //Aquesta funció busca a la base de dades les dades de l'usuari i les mostre per pantalla
@@ -94,8 +100,8 @@ class Menu : AppCompatActivity() {
     {
         if (user !=null)
         {
-            Toast.makeText(this,"Jugador logejat",
-                Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this,"Jugador logejat",
+              //  Toast.LENGTH_SHORT).show()
         }
         else
         {
@@ -104,6 +110,7 @@ class Menu : AppCompatActivity() {
             finish()
         }
     }
+
     //Aquesta funció busca a la base de dades les dades de l'usuari i les mostre per pantalla
     private fun consulta(){
         var database: FirebaseDatabase = FirebaseDatabase.getInstance("https://crogue-357e6-default-rtdb.europe-west1.firebasedatabase.app/")
@@ -148,6 +155,7 @@ class Menu : AppCompatActivity() {
 
 
     }
+
     private fun tancalaSessio() {
         auth.signOut() //tanca la sessió
         //va a la pantalla inicial

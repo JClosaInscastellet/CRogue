@@ -1,7 +1,0 @@
-[
-{
-  "directory": "C:/Users/Judit/Documents/CRogue/app/.cxx/Debug/55d27dz2/x86_64",
-  "command": "C:\\Users\\Judit\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android24 --sysroot=C:/Users/Judit/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dcrogue_EXPORTS -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -g  -fno-limit-debug-info -fPIC -o CMakeFiles\\crogue.dir\\crogue.cpp.o -c C:\\Users\\Judit\\Documents\\CRogue\\app\\src\\main\\cpp\\crogue.cpp",
-  "file": "C:\\Users\\Judit\\Documents\\CRogue\\app\\src\\main\\cpp\\crogue.cpp"
-}
-]

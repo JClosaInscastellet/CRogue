@@ -1,3 +1,0 @@
-/home/judit/AndroidStudioProjects/CRogue/app/.cxx/RelWithDebInfo/4721131w/x86/CMakeFiles/crogue.dir
-/home/judit/AndroidStudioProjects/CRogue/app/.cxx/RelWithDebInfo/4721131w/x86/CMakeFiles/edit_cache.dir
-/home/judit/AndroidStudioProjects/CRogue/app/.cxx/RelWithDebInfo/4721131w/x86/CMakeFiles/rebuild_cache.dir

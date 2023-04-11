@@ -1,3 +1,0 @@
-/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/arm64-v8a/CMakeFiles/crogue.dir
-/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/arm64-v8a/CMakeFiles/edit_cache.dir
-/home/judit/AndroidStudioProjects/CRogue/app/.cxx/Debug/1a643b6m/arm64-v8a/CMakeFiles/rebuild_cache.dir
