@@ -519,10 +519,10 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
                 )
                 if (hp <= 0) { //si el jugador pierde se muestra la pantalla de game over
 
-                    Toast.makeText(applicationContext, "GAME OVER", Toast.LENGTH_SHORT).show()
                     dethSoung.start()
                     updateUserPoints()
                     changeActivity()
+                    handler.removeCallbacksAndMessages(null)
                 }
                 handler.postDelayed(this, 100)//1 sec delay
             }
@@ -533,6 +533,7 @@ class test_Khadija : AppCompatActivity(), GestureDetector.OnGestureListener {
 
         val intent = Intent(this, Menu::class.java)
         startActivity(intent)
+        finish()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
